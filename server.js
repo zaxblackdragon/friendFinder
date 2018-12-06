@@ -1,28 +1,25 @@
 
 
 
-var express = require('express');
-var fs = require("fs");
-var app = express();
-var PORT = process.env.PORT || 3000;
-var amigosapi = require("./app/data/friends")
-amigosapi;
-// var friendsapi = require("./app/data/friends.js")
-// friendsapi;
-// respond with "hello world" when a GET request is made to the homepage
+const express = require('express');
+const fs = require("fs");
+const app = express();
+const PORT = process.env.PORT || 3000;
+
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Get
+// this imports the routes from the htmlRoutes.js file
+const htmlRoutes = require("./app/routing/htmlRoutes.js");
+htmlRoutes(app);
 
-// should have var apiRoutes= require directory path
-// should have var htmlRoutes= require directory path
-app.get('/', function (req, res) {
-
-  res.send(amigosapi[0].name);
-});
+// const apiRoutes = require("./app/routing/apiRoutes.js");
+// apiRoutes(app);
+// app.get("/", function(req, res) {
+//   res.send("you suck");
+// })
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
