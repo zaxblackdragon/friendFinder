@@ -1,5 +1,7 @@
-//route to the apis
+const path = require("path");
 
-// require express
-
-// app.get => return data in friends.js , parse as a json opject and accessed by the API Friends List link
+module.exports = function(app){
+    app.get("/json", function(req, res) {
+        res.send("Hi there");
+    });
+};

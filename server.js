@@ -15,11 +15,8 @@ app.use(express.json());
 const htmlRoutes = require("./app/routing/htmlRoutes.js");
 htmlRoutes(app);
 
-// const apiRoutes = require("./app/routing/apiRoutes.js");
-// apiRoutes(app);
-// app.get("/", function(req, res) {
-//   res.send("you suck");
-// })
+const apiRoutes = require("./app/routing/apiRoutes.js");
+apiRoutes(app);
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
