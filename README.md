@@ -5,10 +5,10 @@ The user inputs their name and a link to their portrait. There are a few questio
 
 [Site Link](https://obscure-badlands-87563.herokuapp.com/)
 
-## Concepts:
+## New Concepts:
 * Site Deployment through heroku
 * Routes
-* Connecting multiple js files routing through servers
+* Connecting multiple js files by routing through a server
 * Utalizing npm packages:
 
         - express npm
