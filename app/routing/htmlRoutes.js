@@ -3,6 +3,8 @@
 const path = require("path");
 // exports the route for the survey.html
 module.exports = function(app) { 
+
+  console.log("what");
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
